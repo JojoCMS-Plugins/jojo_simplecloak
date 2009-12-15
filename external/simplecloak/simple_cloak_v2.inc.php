@@ -92,7 +92,7 @@ class SimpleCloakV2
     }
     if ($not_spider_name) {
       $not_spider_name = mysql_escape_string($not_spider_name);
-      $q .= " AND spider_name <> '$not_spider_name' ";
+      $q .= " AND spider_name != '$not_spider_name' ";
     }
 
     $dbLink = SimpleCloakV2::_connect();
